@@ -1,7 +1,7 @@
 <?php
 
 //include koneksi database
-include('koneksi.php');
+include('../koneksi.php');
 
 //get data dari form
 $id_siswa     = $_POST['id_siswa'];
@@ -21,10 +21,9 @@ $query = "UPDATE tbl_siswa
 SET nisn = '$nisn', 
 nama_lengkap = '$nama_lengkap', 
 alamat = '$alamat'
--- namafile = '$filename' 
 WHERE id_siswa = '$id_siswa'";
     mysqli_query($db, $query);
-    header("location: dashboard.php");
+    header("Location: ../dashboard.php");
 echo 'success';
 
 // echo $query;

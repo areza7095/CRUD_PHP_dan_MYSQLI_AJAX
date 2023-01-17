@@ -92,7 +92,7 @@
                     showConfirmButton: false
                   })
                   .then (function() {
-                    window.location.href = "dashboard.php";
+                    window.location.href = "../index.php";
                   });
 
                 } else {
