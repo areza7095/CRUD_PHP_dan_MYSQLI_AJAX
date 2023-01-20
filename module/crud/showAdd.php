@@ -8,22 +8,27 @@
 // $sql = "select * from tbl_siswa where id_siswa=" . $id_siswa;
 // $result = mysqli_query($connection, $sql);
 
-$response = "<form action=./crud/saveAdd.php method=POST>";
+$response = "<form action=./module/crud/saveAdd.php method=POST enctype='multipart/form-data'>";
 
 $response .=                         "<div class=form-group>";
 $response .=                            "<label>NISN</label>";
-$response .=                            "<input type=text name=nisn  placeholder=Masukkan NISN Siswa class=form-control>";
+$response .=                            "<input type=text name=nisn  placeholder='Masukkan NISN Siswa' class=form-control>";
 $response .=                             "<input type=hidden name=id_siswa ";
 $response .=                      " </div>";
 
 $response .=                      "<div class=form-group>";
 $response .=                          " <label>Nama Lengkap</label>";
-$response .=                           " <input type=text name=nama_lengkap  placeholder=Masukkan Nama Siswa class=form-control>";
+$response .=                           " <input type=text name=nama_lengkap  placeholder='Masukkan Nama Siswa' class=form-control>";
 $response .=                        "</div>";
 
 $response .=                        "<div class=form-group>";
 $response .=                           " <label>Alamat</label>";
-$response .=                            "<textarea class=form-control name=alamat placeholder=Masukkan Alamat Siswa rows=4> </textarea>";
+$response .=                            "<textarea class=form-control name=alamat placeholder='Masukkan Alamat' Siswa rows=4> </textarea>";
+$response .=                       "</div>";
+
+$response .=                        "<div class=form-group>";
+$response .=                           " <label>Foto</label>";
+$response .=                            "<input class='form-control' type='file' name='uploadfile' value='' />";
 $response .=                       "</div>";
 
 

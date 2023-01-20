@@ -23,7 +23,7 @@ nama_lengkap = '$nama_lengkap',
 alamat = '$alamat'
 WHERE id_siswa = '$id_siswa'";
     mysqli_query($db, $query);
-    header("Location: ../dashboard.php");
+    header("Location: http://localhost/CRUD_PHP_dan_MYSQLI_AJAX/");
 echo 'success';
 
 // echo $query;

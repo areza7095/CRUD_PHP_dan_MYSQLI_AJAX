@@ -92,7 +92,7 @@
                     showConfirmButton: false
                   })
                   .then (function() {
-                    window.location.href = "../index.php";
+                    window.location.href = "http://localhost/CRUD_PHP_dan_MYSQLI_AJAX/";
                   });
 
                 } else {

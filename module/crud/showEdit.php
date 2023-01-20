@@ -8,7 +8,7 @@ if (isset($_POST['userid'])) {
 $sql = "select * from tbl_siswa where id_siswa=" . $id_siswa;
 $result = mysqli_query($connection, $sql);
 
-$response = "<form action=./crud/saveEdit.php method=POST>";
+$response = "<form action=./module/crud/saveEdit.php method=POST>";
 while ($row = mysqli_fetch_array($result)) {
     $id_siswa = $row['id_siswa'];
     $nisn = $row['nisn'];
@@ -34,18 +34,18 @@ while ($row = mysqli_fetch_array($result)) {
 
     $response .=                         "<div class=form-group>";
     $response .=                            "<label>NISN</label>";
-    $response .=                            "<input type=text name=nisn value=$row[nisn] placeholder=Masukkan NISN Siswa class=form-control>";
-    $response .=                             "<input type=hidden name=id_siswa value= $row[id_siswa]>";
+    $response .=                            "<input type=text name=nisn value='$row[nisn]' placeholder='Masukkan NISN Siswa' class=form-control>";
+    $response .=                             "<input type=hidden name=id_siswa value='$row[id_siswa]'>";
     $response .=                      " </div>";
 
     $response .=                      "<div class=form-group>";
     $response .=                          " <label>Nama Lengkap</label>";
-    $response .=                           " <input type=text name=nama_lengkap value=$row[nama_lengkap] placeholder=Masukkan Nama Siswa class=form-control>";
+    $response .=                           " <input type=text name=nama_lengkap value='$row[nama_lengkap]' placeholder='Masukkan Nama Siswa' class=form-control>";
     $response .=                        "</div>";
 
     $response .=                        "<div class=form-group>";
     $response .=                           " <label>Alamat</label>";
-    $response .=                            "<textarea class=form-control name=alamat placeholder=Masukkan Alamat Siswa rows=4> $row[alamat]</textarea>";
+    $response .=                            "<textarea class=form-control name=alamat placeholder='Masukkan Alamat Siswa' rows=4>$row[alamat]</textarea>";
     $response .=                       "</div>";
 
 

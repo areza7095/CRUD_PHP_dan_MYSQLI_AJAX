@@ -11,6 +11,7 @@ if (isset($_POST['userid'])) {
 $query = "DELETE FROM tbl_siswa WHERE id_siswa = $id_siswa";
 mysqli_query($connection, $query);
 echo "success";
+header("Location: http://localhost/CRUD_PHP_dan_MYSQLI_AJAX/");
 
 
 ?>
